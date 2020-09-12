@@ -24,7 +24,7 @@ export default class AddExcercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/users/')
+    axios.get('https://hadoop-backend.herokuapp.com/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -75,7 +75,7 @@ export default class AddExcercise extends Component {
 
     console.log(exercise);
 
-    axios.post('http://localhost:5000/excercises/add', exercise)
+    axios.post('https://hadoop-backend.herokuapp.com/excercises/add', exercise)
       .then(res => console.log(res.data));
 
     window.location = '/';

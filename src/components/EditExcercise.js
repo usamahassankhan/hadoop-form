@@ -25,7 +25,7 @@ constructor(props) {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5000/excercises/'+this.props.match.params.id)
+    axios.get('https://hadoop-backend.herokuapp.com//excercises/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,
@@ -38,7 +38,7 @@ constructor(props) {
         console.log(error);
       })
 
-    axios.get('http://localhost:5000/users/')
+    axios.get('https://hadoop-backend.herokuapp.com/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -88,7 +88,7 @@ constructor(props) {
 
     console.log(exercise);
 
-    axios.post('http://localhost:5000/excercises/update/' + this.props.match.params.id, exercise)
+    axios.post('https://hadoop-backend.herokuapp.com/excercises/update/' + this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
 
     window.location = '/';
