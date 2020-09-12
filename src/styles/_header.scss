@@ -1,0 +1,27 @@
+.header {
+    display: flex ;
+    justify-content: space-between;
+    background-color: black;
+    padding: 1.5rem 7rem;
+
+    &__logo {
+        color: white;
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited{
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+    }
+
+    &__linkActive {
+        color: lightseagreen !important;
+    }
+
+}

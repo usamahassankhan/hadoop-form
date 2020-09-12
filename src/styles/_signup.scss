@@ -1,0 +1,35 @@
+.signup {
+    padding: 2rem 1rem;
+
+    &__form {
+        margin-top: 2rem;
+    }
+
+    &__head {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 3px;
+        font-size: 2rem;
+    }
+
+    &__field {
+        padding: 1rem;
+        margin-bottom: 1rem;
+        font-size: .8rem;
+        color: #777;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-left: .5rem;
+
+        &:focus {
+            outline: none;
+            border: 1px solid #52aaff !important;
+            border-radius: 3px;
+        }
+
+        &::placeholder {
+            color: #ccc;
+            font-size: .7rem;
+        }
+    }
+}
